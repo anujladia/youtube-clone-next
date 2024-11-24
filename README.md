@@ -1,4 +1,13 @@
+## Demo
+You can visit the demo application from the link, https://youtube-clone-next-hebs943ar-anujladias-projects.vercel.app/video/zmSwab5WQoo
+
+## Description
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+It is a Video blog that plays youtube videos, with an added functionality to trim the video.
+
+### Tech Stack
+- Next.js @15
+- Tailwind CSS
 
 ## Getting Started
 
