@@ -41,7 +41,7 @@ const Page: React.FC = () => {
   const [currentTime, setCurrentTime]: [number, (currentTime: number) => void] = useState(0);
   const [duration, setDuration]: [number, (duration: number) => void] = useState(1);
   const [intervalId, setIntervalId]: [NodeJS.Timeout | null, (intervalId: NodeJS.Timeout | null) => void] = useState<NodeJS.Timeout | null>(null);
-  const [range, setRange]: [[number, number], (range: [number, number]) => void] = useState([0, 1]);
+  const [range, setRange]: [number[], (range: number[]) => void] = useState([0, 1]);
   const [playing, setPlaying]: [boolean, (playing: boolean) => void] = useState(false);
 
   useEffect(() => {
@@ -76,7 +76,7 @@ const Page: React.FC = () => {
   }
 
   // Handle slider range change
-  const handleRangeChange = (newRange: [number, number]) => {
+  const handleRangeChange = (newRange: number[]) => {
     setRange(newRange);
 
     // Save the new trim positions
@@ -141,7 +141,7 @@ const Page: React.FC = () => {
     if (intervalId) clearInterval(intervalId);
   };
 
-  const seekVideo = (time: [number, number]) => {
+  const seekVideo = (time: number[]) => {
     if (!playerRef.current) return;
   
     setStartTime(time[0]);
