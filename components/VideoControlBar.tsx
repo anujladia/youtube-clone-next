@@ -5,16 +5,28 @@ import Icon from "@/components/Icon";
 
 import formatTime from "@/utils/formatTime";
 
-const VideoControlBar = ({
-  playVideo,
-  pauseVideo,
-  playing,
+interface VideoControlBarProps {
+  min: number;
+  max: number;
+  currentTime: number;
+  duration: number;
+  playing: boolean;
+
+  playVideo: () => void;
+  pauseVideo: () => void;
+  seekVideo: (time: number[]) => void;
+}
+
+const VideoControlBar: React.FC<VideoControlBarProps> = ({
   min,
   max,
+  playing,
   currentTime,
-  seekVideo,
   duration,
-}) => {
+  playVideo,
+  pauseVideo,
+  seekVideo,
+}: VideoControlBarProps) => {
 
   const onPlayButton = () => {
     if (playing) {

@@ -23,8 +23,8 @@ export type ImageType = {
     height?: SafeNumber | undefined;
     placeholderImage?: string | StaticImport;
     sizes?: string;
-    layout?: string;
-    objectFit?: string;
+    layout?: "fill" | "fixed" | "intrinsic" | "responsive" | undefined;
+    objectFit?: 'cover' | undefined;
 } & React.RefAttributes<HTMLImageElement | null>;
 
 const CustomImage = ({

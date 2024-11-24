@@ -1,11 +1,16 @@
 import React from "react";
 
-const IconOptions = {
+interface IconProps {
+  type: string;
+  onHandler: () => void;
+}
+
+const IconOptions: Record<string, JSX.Element> = {
   play: <path d="M7 6v12l10-6-10-6z" />,
   pause: <path d="M6 6h4v12H6zm8 0h4v12h-4z" />,
 };
 
-const Icon = ({ type, onHandler }) => {
+const Icon: React.FC<IconProps> = ({ type, onHandler }: IconProps) => {
   return (
     <button
       onClick={onHandler}

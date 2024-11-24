@@ -89,11 +89,11 @@ const Sidebar: React.FC = () => {
     if (scrollTop + clientHeight >= scrollHeight - 10) {
       const offset = page * VIDEO_LIMIT;
       if (offset < video_data.items.length) {
-        setVideoList((prev: Video[]) => [
-          ...prev,
+        setVideoList([
+          ...videoList,
           ...hardCopy(video_data.items.slice(offset, offset + VIDEO_LIMIT)) as Video[]
         ]);
-        setPage((prev: number) => prev + 1);
+        setPage(page + 1);
       }
     }
   };
