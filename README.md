@@ -1,5 +1,5 @@
 ## Demo
-You can visit the demo application from the link, https://youtube-clone-next-hebs943ar-anujladias-projects.vercel.app/video/zmSwab5WQoo
+You can visit the demo application from the link, https://youtube-clone-next-hebs943ar-anujladias-projects.vercel.app
 
 ## Description
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
