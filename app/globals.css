@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .custom-slider {
+    @apply relative w-full h-2 bg-gray-300 rounded-lg;
+  }
+
+  .custom-thumb {
+    @apply h-6 w-6 rounded-full bg-blue-500 border-2 border-white shadow-md cursor-pointer;
+  }
+
+  .custom-track {
+    @apply bg-blue-300 h-2 rounded-lg;
+  }
+}
